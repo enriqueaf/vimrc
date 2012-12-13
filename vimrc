@@ -3,6 +3,13 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 set ruler
+
+set fileformats=unix,mac,dos  
+"" Whitespace
+set tabstop=2 shiftwidth=2 " a tab is two spaces (or set this to 4)
+set expandtab      " use spaces, not tabs
+
+
 " CtrlP
 "
 "let g:ctrlp_map = '<c-p>' " Mapping
@@ -41,3 +48,21 @@ set statusline+=\ %=                        " align left
 set statusline+=Line:%l/%L[%p%%]            " line X of Y [percent of file]
 set statusline+=\ Col:%c                    " current column
 set statusline+=\ Buf:%n                    " Buffer number
+
+" Ctags
+set tags+=gems.tags
+
+" Folding method
+"set foldmethod=syntax
+"set foldnestmax=3
+"set foldlevelstart=1
+"" Don't screw up folds when inserting text that might affect them, until
+"" leaving insert mode. Foldmethod is local to the window. Protect against
+"" screwing up folding when switching between windows.
+"autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+"autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+"
+" map CTRL-E to end-of-line (insert mode)
+imap <C-e> <esc>$i<right>
+" map CTRL-A to beginning-of-line (insert mode)
+imap <C-a> <esc>^i

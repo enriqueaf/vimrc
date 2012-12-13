@@ -7,3 +7,12 @@
 [submodule "bundle/vim-numbertoggle"]
 	path = bundle/vim-numbertoggle
 	url = git://github.com/jeffkreeftmeijer/vim-numbertoggle.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = git://github.com/mattn/zencoding-vim.git
+[submodule "bundle/vim-coffe-script"]
+	path = bundle/vim-coffe-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/git-vim"]
+	path = bundle/git-vim
+	url = git@github.com:motemen/git-vim.git
